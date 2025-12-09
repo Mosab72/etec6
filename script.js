@@ -222,11 +222,17 @@ function getStatusClass(status) {
 
 // الحصول على فئة CSS حسب نسبة الإنجاز
 function getProgressClass(progress) {
-    if (!progress) return '';
-    if (progress.includes('0') || progress.includes('5%')) return 'progress-new';
-    if (progress.includes('30%')) return 'progress-docs';
-    if (progress.includes('40%')) return 'progress-verification';
-    if (progress.includes('90%')) return 'progress-review';
+    // أي عقد فارغ أو 0 → بدون كلاس
+    if (progress === 0 || progress === "" || progress === null || progress === undefined) return '';
+
+    // تحويل progress لنص لتسهيل المقارنة
+    const progressStr = progress.toString();
+
+    if (progressStr === '5') return 'progress-new';
+    if (progressStr === '30') return 'progress-docs';
+    if (progressStr === '40') return 'progress-verification';
+    if (progressStr === '90') return 'progress-review';
+
     return '';
 }
 
