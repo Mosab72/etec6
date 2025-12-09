@@ -3,17 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نظام إدارة عقود الاعتماد الأكاديمي - المركز الوطني للتقويم والاعتماد الأكاديمي</title>
+    <title> نظام إدارة عقود الاعتماد الأكاديمي </title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
-    <div class="gov-header">
-        <div class="gov-logo">
-            <div class="logo-emblem">🏛️</div>
             <div class="logo-text">
-                <h1>المركز الوطني للتقويم والاعتماد الأكاديمي</h1>
-                <p>National Center for Academic Accreditation and Assessment</p>
+                <h1>نظام إدارة عقود الاعتماد الأكاديمي</h1>
+                <p></p>
             </div>
         </div>
     </div>
@@ -21,7 +17,7 @@
     <div class="container">
         <div class="page-title">
             <h2>نظام إدارة عقود الاعتماد الأكاديمي</h2>
-            <p class="subtitle">نظام متكامل لإدارة ومتابعة عقود الاعتماد الأكاديمي</p>
+            <p class="subtitle">عمليات اعتماد</p>
         </div>
 
         <!-- Tabs Navigation -->
@@ -44,10 +40,6 @@
                 <span class="tab-icon">❓</span>
                 <span class="tab-label">غير محددة</span>
                 <span class="tab-badge secondary">228</span>
-            </button>
-            <button class="tab-button" data-tab="analytics">
-                <span class="tab-icon">📈</span>
-                <span class="tab-label">تحليل بياني</span>
             </button>
         </nav>
 
@@ -92,315 +84,21 @@
                     </div>
                 </div>
 
-                <!-- Top 5 Universities -->
-                <h3 class="section-title" style="margin-top: 40px;">
-                    <span class="title-icon">🏆</span>
-                    أكبر 5 جامعات حسب عدد العقود التي تحت الإجراء
-                </h3>
-                <div class="top-universities-grid">
-                    <div class="rank-card rank-1">
-                        <div class="rank-number">1</div>
-                        <div class="rank-details">
-                            <h4>🏛️ جامعة الملك عبد العزيز</h4>
-                            <div class="rank-stats">
-                                <span class="rank-count">83</span>
-                                <span class="rank-label">عقد</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rank-card rank-2">
-                        <div class="rank-number">2</div>
-                        <div class="rank-details">
-                            <h4>🏛️ جامعة طيبة</h4>
-                            <div class="rank-stats">
-                                <span class="rank-count">39</span>
-                                <span class="rank-label">عقد</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rank-card rank-3">
-                        <div class="rank-number">3</div>
-                        <div class="rank-details">
-                            <h4>🏛️ جامعة الإمام عبد الرحمن بن فيصل</h4>
-                            <div class="rank-stats">
-                                <span class="rank-count">36</span>
-                                <span class="rank-label">عقد</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rank-card rank-4">
-                        <div class="rank-number">4</div>
-                        <div class="rank-details">
-                            <h4>🏛️ جامعة الملك سعود</h4>
-                            <div class="rank-stats">
-                                <span class="rank-count">30</span>
-                                <span class="rank-label">عقد</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rank-card rank-5">
-                        <div class="rank-number">5</div>
-                        <div class="rank-details">
-                            <h4>🏛️ جامعة جدة</h4>
-                            <div class="rank-stats">
-                                <span class="rank-count">29</span>
-                                <span class="rank-label">عقد</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Departments Distribution -->
-                <h3 class="section-title" style="margin-top: 40px;">
-                    <span class="title-icon">📚</span>
-                    توزيع العقود حسب الإدارات
-                </h3>
-                <div class="departments-grid">
-                    <div class="dept-card dept-1">
-                        <div class="dept-icon">📖</div>
-                        <div class="dept-details">
-                            <div class="dept-number">1</div>
-                            <h4>إدارة برامج العلوم الإنسانية والتربوية</h4>
-                            <div class="dept-stats">
-                                <span class="dept-count">156</span>
-                                <span class="dept-label">عقد</span>
-                                <span class="dept-percentage">35.1%</span>
-                            </div>
-                            <div class="dept-progress-bar">
-                                <div class="dept-progress-fill" style="width: 35.1%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dept-card dept-2">
-                        <div class="dept-icon">🏥</div>
-                        <div class="dept-details">
-                            <div class="dept-number">2</div>
-                            <h4>إدارة برامج العلوم الصحية</h4>
-                            <div class="dept-stats">
-                                <span class="dept-count">91</span>
-                                <span class="dept-label">عقد</span>
-                                <span class="dept-percentage">20.4%</span>
-                            </div>
-                            <div class="dept-progress-bar">
-                                <div class="dept-progress-fill" style="width: 20.4%; background: linear-gradient(90deg, #28a745, #20c997);"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dept-card dept-3">
-                        <div class="dept-icon">🔬</div>
-                        <div class="dept-details">
-                            <div class="dept-number">3</div>
-                            <h4>إدارة برامج التخصصات العلمية</h4>
-                            <div class="dept-stats">
-                                <span class="dept-count">77</span>
-                                <span class="dept-label">عقد</span>
-                                <span class="dept-percentage">17.3%</span>
-                            </div>
-                            <div class="dept-progress-bar">
-                                <div class="dept-progress-fill" style="width: 17.3%; background: linear-gradient(90deg, #17a2b8, #138496);"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dept-card dept-4">
-                        <div class="dept-icon">💻</div>
-                        <div class="dept-details">
-                            <div class="dept-number">4</div>
-                            <h4>إدارة برامج العلوم الهندسية والحاسوبية</h4>
-                            <div class="dept-stats">
-                                <span class="dept-count">73</span>
-                                <span class="dept-label">عقد</span>
-                                <span class="dept-percentage">16.4%</span>
-                            </div>
-                            <div class="dept-progress-bar">
-                                <div class="dept-progress-fill" style="width: 16.4%; background: linear-gradient(90deg, #6f42c1, #5a32a3);"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dept-card dept-5">
-                        <div class="dept-icon">🕌</div>
-                        <div class="dept-details">
-                            <div class="dept-number">5</div>
-                            <h4>إدارة برامج العلوم الإسلامية والعربية</h4>
-                            <div class="dept-stats">
-                                <span class="dept-count">48</span>
-                                <span class="dept-label">عقد</span>
-                                <span class="dept-percentage">10.8%</span>
-                            </div>
-                            <div class="dept-progress-bar">
-                                <div class="dept-progress-fill" style="width: 10.8%; background: linear-gradient(90deg, #fd7e14, #e8590c);"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="overview-info">
                     <div class="info-box">
-                        <h4>🏛️ الجامعات المشمولة</h4>
+                        <h4>الجامعات المشمولة</h4>
                         <p class="info-number">39</p>
                         <p class="info-text">جامعة</p>
                     </div>
                     <div class="info-box">
-                        <h4>📋 الإدارات المسؤولة</h4>
+                        <h4>الإدارات المسؤولة</h4>
                         <p class="info-number">5</p>
                         <p class="info-text">إدارات</p>
                     </div>
                     <div class="info-box">
-                        <h4>📚 البرامج الأكاديمية</h4>
+                        <h4>البرامج الأكاديمية</h4>
                         <p class="info-number">445</p>
                         <p class="info-text">برنامج</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Analytics Tab - Power BI Style Dashboard -->
-        <div class="tab-content" id="analytics-tab">
-            <div class="dashboard-container">
-                <h3 class="section-title">
-                    <span class="title-icon">📊</span>
-                    لوحة التحليل البياني - نظرة شاملة
-                </h3>
-
-                <!-- KPIs Row -->
-                <div class="kpi-row">
-                    <div class="kpi-card kpi-primary">
-                        <div class="kpi-icon">📋</div>
-                        <div class="kpi-content">
-                            <h4>إجمالي العقود</h4>
-                            <p class="kpi-value">445</p>
-                            <span class="kpi-trend">100%</span>
-                        </div>
-                    </div>
-                    <div class="kpi-card kpi-success">
-                        <div class="kpi-icon">✅</div>
-                        <div class="kpi-content">
-                            <h4>معدل الإنجاز</h4>
-                            <p class="kpi-value">39.3%</p>
-                            <span class="kpi-trend positive">↗ +5.2%</span>
-                        </div>
-                    </div>
-                    <div class="kpi-card kpi-warning">
-                        <div class="kpi-icon">⚠️</div>
-                        <div class="kpi-content">
-                            <h4>العقود المتأخرة</h4>
-                            <p class="kpi-value">42</p>
-                            <span class="kpi-trend negative">↘ 9.4%</span>
-                        </div>
-                    </div>
-                    <div class="kpi-card kpi-info">
-                        <div class="kpi-icon">🏛️</div>
-                        <div class="kpi-content">
-                            <h4>متوسط العقود/جامعة</h4>
-                            <p class="kpi-value">11.4</p>
-                            <span class="kpi-trend">عقد</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Charts Row 1 -->
-                <div class="charts-row">
-                    <div class="chart-card chart-large">
-                        <div class="chart-header">
-                            <h4>📊 توزيع حالة العقود</h4>
-                            <span class="chart-subtitle">التوزيع النسبي للعقود حسب حالة الجدولة</span>
-                        </div>
-                        <div class="chart-body">
-                            <canvas id="statusChart"></canvas>
-                        </div>
-                    </div>
-                    <div class="chart-card chart-medium">
-                        <div class="chart-header">
-                            <h4>🏆 أكبر 5 جامعات</h4>
-                            <span class="chart-subtitle">حسب عدد العقود</span>
-                        </div>
-                        <div class="chart-body">
-                            <canvas id="topUniversitiesChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Charts Row 2 -->
-                <div class="charts-row">
-                    <div class="chart-card chart-medium">
-                        <div class="chart-header">
-                            <h4>📚 توزيع الإدارات</h4>
-                            <span class="chart-subtitle">العقود حسب الإدارة المسؤولة</span>
-                        </div>
-                        <div class="chart-body">
-                            <canvas id="departmentsChart"></canvas>
-                        </div>
-                    </div>
-                    <div class="chart-card chart-large">
-                        <div class="chart-header">
-                            <h4>📈 نسب الإنجاز</h4>
-                            <span class="chart-subtitle">توزيع العقود حسب نسبة الإنجاز</span>
-                        </div>
-                        <div class="chart-body">
-                            <canvas id="progressChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Charts Row 3 -->
-                <div class="charts-row">
-                    <div class="chart-card chart-full">
-                        <div class="chart-header">
-                            <h4>🎓 توزيع العقود حسب الدرجة العلمية</h4>
-                            <span class="chart-subtitle">تحليل مقارن للدرجات العلمية</span>
-                        </div>
-                        <div class="chart-body">
-                            <canvas id="degreeChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Charts Row 4 -->
-                <div class="charts-row">
-                    <div class="chart-card chart-medium">
-                        <div class="chart-header">
-                            <h4>📋 حالة الوثائق</h4>
-                            <span class="chart-subtitle">توزيع حالة استلام الوثائق</span>
-                        </div>
-                        <div class="chart-body">
-                            <canvas id="docsStatusChart"></canvas>
-                        </div>
-                    </div>
-                    <div class="chart-card chart-medium">
-                        <div class="chart-header">
-                            <h4>⏱️ الالتزام بالجدولة</h4>
-                            <span class="chart-subtitle">نسبة الالتزام بالمواعيد المحددة</span>
-                        </div>
-                        <div class="chart-body">
-                            <canvas id="complianceChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Data Table -->
-                <div class="chart-card chart-full">
-                    <div class="chart-header">
-                        <h4>📊 جدول البيانات التفصيلي</h4>
-                        <span class="chart-subtitle">ملخص شامل لجميع الجامعات</span>
-                    </div>
-                    <div class="chart-body">
-                        <div class="data-table-container">
-                            <table class="data-table" id="universitiesTable">
-                                <thead>
-                                    <tr>
-                                        <th>الترتيب</th>
-                                        <th>الجامعة</th>
-                                        <th>إجمالي العقود</th>
-                                        <th>تم جدولة الزيارة</th>
-                                        <th>لم تتم الجدولة</th>
-                                        <th>غير محددة</th>
-                                        <th>نسبة الإنجاز</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="universitiesTableBody">
-                                    <!-- سيتم ملؤها عبر JavaScript -->
-                                </tbody>
-                            </table>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -507,7 +205,7 @@
     </div>
 
     <footer class="gov-footer">
-        <p>© 2025 المركز الوطني للتقويم والاعتماد الأكاديمي - جميع الحقوق محفوظة</p>
+        <p></p>
     </footer>
 
     <script src="contracts_data.js"></script>
