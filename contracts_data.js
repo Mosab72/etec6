@@ -782,7 +782,7 @@ const contractsData = [
     "program": "بكالوريوس، إدارة التجزئة، كلية إدارة الأعمال، جامعة الأعمال والتكنولوجيا",
     "docsComplianceStatus": "تم التسليم متأخر",
     "docsReceived": "25/06/2025",
-    "progress": "0",
+    "progress": "غير محدد",
     "docsUpdatedStatus": "لم يتم التسليم",
     "docsUpdatedReceived": "",
     "visitScheduled": "02/10/2025",
