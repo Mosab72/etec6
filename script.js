@@ -222,15 +222,20 @@ function getStatusClass(status) {
 
 // الحصول على فئة CSS حسب نسبة الإنجاز
 function getProgressClass(progress) {
+    // إذا جاك فراغ ""
+    if (progress === "") progress = 0;
+
+    // إذا ما فيه progress أبدًا
     if (!progress) return '';
+
     if (progress === 0) return 'progress-undefined';
     if (progress === 5) return 'progress-new';
-    if (progress.includes('30%')) return 'progress-docs';
-    if (progress.includes('40%')) return 'progress-verification';
-    if (progress.includes('90%')) return 'progress-review';
+    if (progress === 30) return 'progress-docs';
+    if (progress === 40) return 'progress-verification';
+    if (progress === 90) return 'progress-review';
+
     return '';
 }
-
 // الحصول على فئة CSS حسب حالة الامتثال
 function getComplianceClass(status) {
     if (!status) return 'compliance-undefined';
