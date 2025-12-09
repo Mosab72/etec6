@@ -220,21 +220,49 @@ function getStatusClass(status) {
     return statusMap[status] || 'status-default';
 }
 
-// الحصول على فئة CSS حسب نسبة الإنجاز
+// دالة للحصول على فئة CSS حسب نسبة الإنجاز
 function getProgressClass(progress) {
-    // أي عقد فارغ أو قيمته 0 → بدون كلاس
-    if (progress === 0 || progress === "" || progress === null || progress === undefined) return '';
-
-    // تحويل progress لنص لتسهيل المقارنة
-    const progressStr = progress.toString();
-
-    if (progressStr === '5') return 'progress-new';
-    if (progressStr === '30') return 'progress-docs';
-    if (progressStr === '40') return 'progress-verification';
-    if (progressStr === '90') return 'progress-review';
-
+    if (progress === 5) return 'progress-new';
+    if (progress === 30) return 'progress-docs';
+    if (progress === 40) return 'progress-verification';
+    if (progress === 90) return 'progress-review';
+    // أي progress = 0 أو فارغ → بدون كلاس
     return '';
 }
+
+// دالة فلترة العقود حسب progress
+function filterContracts(contracts, progressFilter) {
+    return contracts.filter(contract => {
+        const progress = contract.progress;
+
+        if (progressFilter === "") {
+            return true; // جميع العقود
+        } else if (progressFilter === "undefined") {
+            // أي عقد فارغ أو 0 أو غير معروف
+            return progress === 0 || progress === "" || progress === null || progress === undefined;
+        } else {
+            return progress === Number(progressFilter);
+        }
+    });
+}
+
+// تحديث عرض العقود لكل تاب
+function updateContracts(tabId, contracts) {
+    const filterValue = document.querySelector(`#filter-progress-${tabId}`).value;
+    const filtered = filterContracts(contracts, filterValue);
+
+    document.querySelector(`#count-${tabId}`).textContent = filtered.length;
+
+    const container = document.querySelector(`#contracts-${tabId}`);
+    container.innerHTML = filtered.map(c => `<p>${c.name} - ${c.progress || 'غير محدد'}</p>`).join('');
+}
+
+// ربط الفلتر لكل تاب
+['scheduled','not-scheduled','undefined'].forEach(tab => {
+    document.querySelector(`#filter-progress-${tab}`).addEventListener('change', () => {
+        updateContracts(tab, window[`contracts_${tab}`] || []);
+    });
+});
 
 // الحصول على فئة CSS حسب حالة الامتثال
 function getComplianceClass(status) {
