@@ -223,7 +223,8 @@ function getStatusClass(status) {
 // الحصول على فئة CSS حسب نسبة الإنجاز
 function getProgressClass(progress) {
     if (!progress) return '';
-    if (progress.includes('0%') || progress.includes('5%')) return 'progress-new';
+    if (progress === 0) return 'progress-undefined';
+    if (progress === 5) return 'progress-new';
     if (progress.includes('30%')) return 'progress-docs';
     if (progress.includes('40%')) return 'progress-verification';
     if (progress.includes('90%')) return 'progress-review';
