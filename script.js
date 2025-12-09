@@ -220,49 +220,15 @@ function getStatusClass(status) {
     return statusMap[status] || 'status-default';
 }
 
-// دالة للحصول على فئة CSS حسب نسبة الإنجاز
+// الحصول على فئة CSS حسب نسبة الإنجاز
 function getProgressClass(progress) {
-    if (progress === 5) return 'progress-new';
-    if (progress === 30) return 'progress-docs';
-    if (progress === 40) return 'progress-verification';
-    if (progress === 90) return 'progress-review';
-    // أي progress = 0 أو فارغ → بدون كلاس
+    if (!progress) return '';
+    if (progress.includes('0%') || progress.includes('5%')) return 'progress-new';
+    if (progress.includes('30%')) return 'progress-docs';
+    if (progress.includes('40%')) return 'progress-verification';
+    if (progress.includes('90%')) return 'progress-review';
     return '';
 }
-
-// دالة فلترة العقود حسب progress
-function filterContracts(contracts, progressFilter) {
-    return contracts.filter(contract => {
-        const progress = contract.progress;
-
-        if (progressFilter === "") {
-            return true; // جميع العقود
-        } else if (progressFilter === "undefined") {
-            // أي عقد فارغ أو 0 أو غير معروف
-            return progress === 0 || progress === "" || progress === null || progress === undefined;
-        } else {
-            return progress === Number(progressFilter);
-        }
-    });
-}
-
-// تحديث عرض العقود لكل تاب
-function updateContracts(tabId, contracts) {
-    const filterValue = document.querySelector(`#filter-progress-${tabId}`).value;
-    const filtered = filterContracts(contracts, filterValue);
-
-    document.querySelector(`#count-${tabId}`).textContent = filtered.length;
-
-    const container = document.querySelector(`#contracts-${tabId}`);
-    container.innerHTML = filtered.map(c => `<p>${c.name} - ${c.progress || 'غير محدد'}</p>`).join('');
-}
-
-// ربط الفلتر لكل تاب
-['scheduled','not-scheduled','undefined'].forEach(tab => {
-    document.querySelector(`#filter-progress-${tab}`).addEventListener('change', () => {
-        updateContracts(tab, window[`contracts_${tab}`] || []);
-    });
-});
 
 // الحصول على فئة CSS حسب حالة الامتثال
 function getComplianceClass(status) {
