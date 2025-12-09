@@ -5862,7 +5862,7 @@ const contractsData = [
     "docsUpdatedStatus": "لم يتم التسليم",
     "docsUpdatedReceived": "",
     "visitScheduled": "04/02/2026",
-    "visitComplianceStatus": "- بدون تسليم وثائق محدثة - تم جدولة الزيارة - متأخر / لايوجد نسبة انجاز مسجلة /",
+    "visitComplianceStatus": "- بدون تسليم وثائق محدثة - تم جدولة الزيارة - متأخر / لايوجد نسبة انجاز مسجلة ",
     "reviewersVisitScheduled": "05/04/2026",
     "department": "إدارة برامج العلوم الإنسانية والتربوية",
     "university": "جامعة جدة",
