@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة عقود الاعتماد الأكاديمي - المركز الوطني للتقويم والاعتماد الأكاديمي</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gov-header">
+        <div class="gov-logo">
+            <div class="logo-emblem">🏛️</div>
+            <div class="logo-text">
+                <h1>المركز الوطني للتقويم والاعتماد الأكاديمي</h1>
+                <p>National Center for Academic Accreditation and Assessment</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-title">
+            <h2>نظام إدارة عقود الاعتماد الأكاديمي</h2>
+            <p class="subtitle">نظام متكامل لإدارة ومتابعة عقود الاعتماد الأكاديمي</p>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <nav class="tabs-navigation">
+            <button class="tab-button active" data-tab="overview">
+                <span class="tab-icon">📊</span>
+                <span class="tab-label">النظرة العامة</span>
+            </button>
+            <button class="tab-button" data-tab="scheduled">
+                <span class="tab-icon">✅</span>
+                <span class="tab-label">تم جدولة الزيارة</span>
+                <span class="tab-badge">175</span>
+            </button>
+            <button class="tab-button" data-tab="not-scheduled">
+                <span class="tab-icon">⚠️</span>
+                <span class="tab-label">لم تتم الجدولة - متأخر</span>
+                <span class="tab-badge warning">42</span>
+            </button>
+            <button class="tab-button" data-tab="undefined">
+                <span class="tab-icon">❓</span>
+                <span class="tab-label">غير محددة</span>
+                <span class="tab-badge secondary">228</span>
+            </button>
+        </nav>
+
+        <!-- Overview Tab -->
+        <div class="tab-content active" id="overview-tab">
+            <div class="overview-section">
+                <h3 class="section-title">
+                    <span class="title-icon">📈</span>
+                    حالة العقود
+                </h3>
+                <div class="stats-grid">
+                    <div class="stat-card total">
+                        <div class="stat-icon">📋</div>
+                        <div class="stat-details">
+                            <h4>إجمالي العقود</h4>
+                            <p class="stat-number">445</p>
+                        </div>
+                    </div>
+                    <div class="stat-card scheduled">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-details">
+                            <h4>تم جدولة الزيارة</h4>
+                            <p class="stat-number">175</p>
+                            <span class="stat-percentage">39.3%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card not-scheduled">
+                        <div class="stat-icon">⚠️</div>
+                        <div class="stat-details">
+                            <h4>لم تتم الجدولة - متأخر</h4>
+                            <p class="stat-number">42</p>
+                            <span class="stat-percentage">9.4%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card undefined">
+                        <div class="stat-icon">❓</div>
+                        <div class="stat-details">
+                            <h4>غير محددة</h4>
+                            <p class="stat-number">228</p>
+                            <span class="stat-percentage">51.2%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overview-info">
+                    <div class="info-box">
+                        <h4>🏛️ الجامعات المشمولة</h4>
+                        <p class="info-number">39</p>
+                        <p class="info-text">جامعة</p>
+                    </div>
+                    <div class="info-box">
+                        <h4>📋 الإدارات المسؤولة</h4>
+                        <p class="info-number">5</p>
+                        <p class="info-text">إدارات</p>
+                    </div>
+                    <div class="info-box">
+                        <h4>📚 البرامج الأكاديمية</h4>
+                        <p class="info-number">445</p>
+                        <p class="info-text">برنامج</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scheduled Contracts Tab -->
+        <div class="tab-content" id="scheduled-tab">
+            <div class="filters-section">
+                <h3 class="section-title">
+                    <span class="title-icon">🔍</span>
+                    البحث والفلترة
+                </h3>
+                <div class="search-bar">
+                    <input type="text" id="search-scheduled" placeholder="ابحث في البرامج أو الجامعات...">
+                </div>
+                <div class="filters-grid">
+                    <select id="filter-university-scheduled" class="filter-select">
+                        <option value="">جميع الجامعات</option>
+                    </select>
+                    <select id="filter-department-scheduled" class="filter-select">
+                        <option value="">جميع الإدارات</option>
+                    </select>
+                    <select id="filter-progress-scheduled" class="filter-select">
+                        <option value="">جميع نسب الإنجاز</option>
+                        <option value="0%">0% - العقود الجديدة - اللقاء التعريفي</option>
+                        <option value="5%">5% - العقود الجديدة - اللقاء التعريفي</option>
+                        <option value="30%">30% - العقود الجديدة - دراسة الوثائق</option>
+                        <option value="40%">40% - زيارة التحقق</option>
+                        <option value="90%">90% - زيارة فريق المراجعة</option>
+                    </select>
+                </div>
+                <div class="results-count">
+                    <p>عدد النتائج: <span id="count-scheduled">175</span></p>
+                </div>
+            </div>
+            <div class="contracts-container" id="contracts-scheduled"></div>
+        </div>
+
+        <!-- Not Scheduled Contracts Tab -->
+        <div class="tab-content" id="not-scheduled-tab">
+            <div class="filters-section">
+                <h3 class="section-title">
+                    <span class="title-icon">🔍</span>
+                    البحث والفلترة
+                </h3>
+                <div class="search-bar">
+                    <input type="text" id="search-not-scheduled" placeholder="ابحث في البرامج أو الجامعات...">
+                </div>
+                <div class="filters-grid">
+                    <select id="filter-university-not-scheduled" class="filter-select">
+                        <option value="">جميع الجامعات</option>
+                    </select>
+                    <select id="filter-department-not-scheduled" class="filter-select">
+                        <option value="">جميع الإدارات</option>
+                    </select>
+                    <select id="filter-progress-not-scheduled" class="filter-select">
+                        <option value="">جميع نسب الإنجاز</option>
+                        <option value="0%">0% - العقود الجديدة - اللقاء التعريفي</option>
+                        <option value="5%">5% - العقود الجديدة - اللقاء التعريفي</option>
+                        <option value="30%">30% - العقود الجديدة - دراسة الوثائق</option>
+                        <option value="40%">40% - زيارة التحقق</option>
+                        <option value="90%">90% - زيارة فريق المراجعة</option>
+                    </select>
+                </div>
+                <div class="results-count">
+                    <p>عدد النتائج: <span id="count-not-scheduled">42</span></p>
+                </div>
+            </div>
+            <div class="contracts-container" id="contracts-not-scheduled"></div>
+        </div>
+
+        <!-- Undefined Contracts Tab -->
+        <div class="tab-content" id="undefined-tab">
+            <div class="filters-section">
+                <h3 class="section-title">
+                    <span class="title-icon">🔍</span>
+                    البحث والفلترة
+                </h3>
+                <div class="search-bar">
+                    <input type="text" id="search-undefined" placeholder="ابحث في البرامج أو الجامعات...">
+                </div>
+                <div class="filters-grid">
+                    <select id="filter-university-undefined" class="filter-select">
+                        <option value="">جميع الجامعات</option>
+                    </select>
+                    <select id="filter-department-undefined" class="filter-select">
+                        <option value="">جميع الإدارات</option>
+                    </select>
+                    <select id="filter-progress-undefined" class="filter-select">
+                        <option value="">جميع نسب الإنجاز</option>
+                        <option value="0%">0% - العقود الجديدة - اللقاء التعريفي</option>
+                        <option value="5%">5% - العقود الجديدة - اللقاء التعريفي</option>
+                        <option value="30%">30% - العقود الجديدة - دراسة الوثائق</option>
+                        <option value="40%">40% - زيارة التحقق</option>
+                        <option value="90%">90% - زيارة فريق المراجعة</option>
+                    </select>
+                </div>
+                <div class="results-count">
+                    <p>عدد النتائج: <span id="count-undefined">228</span></p>
+                </div>
+            </div>
+            <div class="contracts-container" id="contracts-undefined"></div>
+        </div>
+    </div>
+
+    <footer class="gov-footer">
+        <p>© 2025 المركز الوطني للتقويم والاعتماد الأكاديمي - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script src="contracts_data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
